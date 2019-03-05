@@ -1,0 +1,68 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="grid/responsive.css">
+
+    <style type="text/css">
+      body{
+        margin: 0;
+        padding: 0;
+      }
+      .center{
+        width: 1280px;
+        margin: 0 auto;
+      }
+      .col{
+        min-height: 2000px;
+      }
+
+      /*.bg-yellow{
+        background: yellow;
+      }
+
+      .bg-blue{
+        background: blue;
+      }*/
+
+      @media only screen and (max-width : 1280px){
+        .grid-site__box,
+        .center{
+          width: 100% !important;
+        }
+      }
+    </style>
+</head>
+
+<body class="main">
+  <div class='center'>
+    <div class='center__inner'>
+      <div class='grid'>
+        <div class='col col-1-12 bg-yellow' ></div>
+        <div class='col col-1-12 bg-blue' ></div>
+        <div class='col col-1-12 bg-yellow' ></div>
+        <div class='col col-1-12 bg-blue' ></div>
+        <div class='col col-1-12 bg-yellow' ></div>
+        <div class='col col-1-12 bg-blue' ></div>
+        <div class='col col-1-12 bg-yellow' ></div>
+        <div class='col col-1-12 bg-blue' ></div>
+        <div class='col col-1-12 bg-yellow' ></div>
+        <div class='col col-1-12 bg-blue' ></div>
+        <div class='col col-1-12 bg-yellow' ></div>
+        <div class='col col-1-12 bg-blue' ></div>
+      <div>
+    </div>
+  </div>
+  <script src="grid/grid.js"></script>
+  <script type="text/javascript">
+    var g = new GRID({
+      width: 1280,
+      col: 12,
+      gutter: 10
+    });
+  </script>
+</body>
+</html>

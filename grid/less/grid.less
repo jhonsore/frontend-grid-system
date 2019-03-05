@@ -1,0 +1,13 @@
+.grid(@name; @columns; @index: 1) when (@index =< @columns) {
+  .grid(@name; @columns; (@index + 1));
+  .@{name}-@{index}-@{columns} {
+    width: ( percentage(@index / @columns) );
+  }
+}
+
+.grid-master(@name; @columns; @index: 1) when (@index =< @columns) {
+  .grid-master(@name; @columns; (@index + 1));
+  .@{name}-@{index} {
+    width: ( percentage(@index / @columns) );
+  }
+}

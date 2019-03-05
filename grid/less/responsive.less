@@ -1,0 +1,99 @@
+// out: ../responsive.css, compress: true
+.clear{clear:both !important; float:none !important; margin:0px !important; padding:0px !important; height:0px !important; width:0px !important}
+.clearfix:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+.clearfix {display: inline-block;}
+html[xmlns] .clearfix {display: block;}
+* html .clearfix {height: 1%;}
+
+//Building a Responsive Grid System
+//https://webdesign.tutsplus.com/tutorials/understanding-the-less-loop--cms-23827
+
+@import "./grid";
+
+.grid:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+
+.col{
+  float: left;
+  width: 100%;
+}
+
+.col-hide{
+  display: none; overflow: hidden; height: 0; width: 0; visibility: hidden;
+}
+
+.col-show{
+  display: block !important;
+  overflow: auto !important;
+  visibility: visible !important;
+}
+
+.grid(col; 24);
+.grid-master(col; 24);
+.grid(col; 16);
+.grid-master(col; 16);
+.grid(col; 12);
+.grid-master(col; 12);
+
+@media only screen and (min-width : 1201px){
+  .col-xxl-show{ .col-show; }
+  .col-xxl-hide{ .col-hide; }
+  .grid(col-xxl; 24);
+  .grid(col-xxl; 16);
+  .grid(col-xxl; 12);
+}
+
+@media only screen and (max-width : 1200px) {
+  .col-xl-show{ .col-show; }
+  .col-xl-hide{ .col-hide; }
+  .grid(col-xl; 24);
+  .grid(col-xl; 16);
+  .grid(col-xl; 12);
+}
+
+@media only screen and (max-width : 1024px) {
+  .col-lg-show{ .col-show; }
+  .col-lg-hide{ .col-hide; }
+  .grid(col-lg; 24);
+  .grid(col-lg; 16);
+  .grid(col-lg; 12);
+}
+
+@media only screen and (max-width : 900px) {
+  .col-md-show{ .col-show; }
+  .col-md-hide{ .col-hide; }
+  .grid(col-md; 24);
+  .grid(col-md; 16);
+  .grid(col-md; 12);
+}
+
+@media only screen and (max-width : 768px) {
+  .col-tb-show{ .col-show; }
+  .col-tb-hide{ .col-hide;}
+  .grid(col-tb; 24);
+  .grid(col-tb; 16);
+  .grid(col-tb; 12);
+}
+
+@media only screen and (max-width : 600px) {
+  .col-sm-show{ .col-show; }
+  .col-sm-hide{ .col-hide;}
+  .grid(col-sm; 24);
+  .grid(col-sm; 16);
+  .grid(col-sm; 12);
+}
+
+@media only screen and (max-width : 480px) {
+  .col-xs-show{ .col-show; }
+  .col-xs-hide{ .col-hide;}
+  .grid(col-xs; 24);
+  .grid(col-xs; 16);
+  .grid(col-xs; 12);
+}
+
+@media only screen and (max-width : 321px) {
+  .col-xx-show{ .col-show; }
+  .col-xx-hide{ .col-hide;}
+  .grid(col-xx; 24);
+  .grid(col-xx; 16);
+  .grid(col-xx; 12);
+}
